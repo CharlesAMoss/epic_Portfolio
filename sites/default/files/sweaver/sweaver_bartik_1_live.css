@@ -1,0 +1,11 @@
+a span {
+  font-family: 'Palatino Linotype',Palatino,Serif;
+  font-style: italic;
+  font-size: 73px;
+  line-height: 100px;
+}
+
+#header .section {
+  line-height: 0px;
+}
+
