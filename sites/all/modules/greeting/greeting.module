@@ -6,21 +6,29 @@ function greeting_menu() {
         'title' => "Hello Friend!",
         'page callback' => 'say_hello',
         'access callback' => TRUE,
-        'type' => MENU_NORMAL_ITEM,
+        'type' => MENU_CALLBACK,
     );
     $items['farewell'] = array(
-        'title' => 'Farewell Friend!',
-        'page callback' => 'say_farewell',
-        'access callback' => TRUE,
-        'type' => MENU_NORMAL_ITEM,
+       'title' => 'Farewell Friend!',
+       'page callback' => 'say_farewell',
+       'access callback' => TRUE,
+       'type' => MENU_CALLBACK,
     );
     return $items;
 }
 
 function say_hello() {
-    return '<p style="color:red;font-size:3em;">Hellooo mah dear friend</p>';
+    return '<p style="font-size:3em;color:red;">Hello my Dr Friedchicken!</p>';
 }
 
 function say_farewell() {
-    return '<p>Fare thee well my dear friend!</p>';
+    return '<p style="font-size:3em;color:green;">Fare thee well Dr Friedchicken!</p>';
+}
+
+function greeting_user_login() {
+    $_GET['destination'] = 'hello_friend';
+}
+
+function greeting_user_logout() {
+    $_GET['destination'] = 'farewell';
 }
